@@ -1,9 +1,35 @@
-body{
-    width: 100%;
-    height: 100%;
-}
-
 .gitLink{
     position: absolute;
     right: 5px;
+}
+
+.phones a{
+    text-decoration: none;
+    color: black;
+}
+
+.phones{
+    border: 2px solid red;
+}
+
+.picture{
+    background-color: brown;
+    text-decoration: none;
+    color: black;
+    width: 20%;
+    height: 20%;
+}
+
+.discription h2{
+    background-color: brown;
+    width: 80%;
+    display: block;
+    text-transform: uppercase;
+    color: blue;
+}
+
+.discription p{
+    width: 80%;
+    background-color: brown;
+    display: block;
 }
