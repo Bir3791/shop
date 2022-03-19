@@ -5,7 +5,9 @@ const phonesEl = document.querySelector('.phones'),
 function renderingFilter() {
     const filters = document.createElement("div");
     filters.classList.add('.filter');
-    filters.innerHTML = `<input type="text" placeholder="search">
+    filters.innerHTML = `<span>Search</span> 
+        <input type="text">
+        <span>Sort by</span>
         <select name="" id="">
             <option value="age">Age</option>
             <option value="alphabet">Alphabet</option>
