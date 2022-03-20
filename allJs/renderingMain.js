@@ -1,22 +1,5 @@
-const phonesEl = document.querySelector('.phones'),
-      mainContainer = document.querySelector('.mainContainer') 
+renderinPhones(phones)
 
-
-function renderingFilter() {
-    const filters = document.createElement("div");
-    filters.classList.add('.filter');
-    filters.innerHTML = `<span>Search</span> 
-        <input type="text">
-        <span>Sort by</span>
-        <select name="" id="">
-            <option value="age">Age</option>
-            <option value="alphabet">Alphabet</option>
-        </select>
-    `
-    mainContainer.insertBefore(filters, phonesEl);
-}
-
-renderingFilter()
 function renderinPhones(data) {
     
     for (let i = 0; i < data.length; i++) {
@@ -38,5 +21,3 @@ function renderinPhones(data) {
         phonesEl.appendChild(phoneEl);
     }
 }
-
- renderinPhones(phones)
