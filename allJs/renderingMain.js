@@ -6,8 +6,8 @@ function renderinPhones(data) {
         const phoneEl = document.createElement("div");
         phoneEl.classList.add('.phone');
         phoneEl.innerHTML = `
-        <div class="phone">
-            <a href="motorola-xoom-with-wi-fi">
+        <a href=${data[i].id}>
+            <div class="phone">
                     <div class="picture_container" >
                         <img src=${data[i].imageUrl}>
                     </div>
@@ -15,8 +15,8 @@ function renderinPhones(data) {
                         <h2>${data[i].name}</h2>
                         <p>${data[i].snippet}</p>
                     </div>
-                </a>
-        </div>
+            </div>
+        </a>
         `;
         phonesEl.appendChild(phoneEl);
     }

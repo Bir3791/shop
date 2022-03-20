@@ -35,11 +35,11 @@
 .phone img{
     width: 200px;
     float: left;
-    margin-top: -30px;
+    margin-top: -10px;
     margin-right: 50px;
 }
 
-.phone a{
+a{
     text-decoration: none;
 }
 
