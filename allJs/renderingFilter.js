@@ -43,25 +43,26 @@ function sortByAlpabet(arr) {
    renderinPhones(rezutl);
 }
 
-// function searchingList(search, arr) {
-//     let tempArr = [];
-//     for (let i = 0; i < arr.length; i++) {
-//         let name = arr[i].name.toLowerCase();
-//         let snippet = arr[i].snippet.toLowerCase();
-//         if (name.includes(search.toLowerCase())) {
-//             tempArr.push(arr[i]);
-//         }
-//     }
-//     phonesEl.innerHTML = '';
-//     renderinPhones(tempArr)
-// }
-
 function searchingList(search, arr) {
-    let tempArr = arr.filter(function (item) {
-        let name = item.name.toLowerCase();
-        let snippet = item.snippet.toLowerCase();
-        return name.includes(search.toLowerCase());
-    });
+    let tempArr = [];
+    for (let i = 0; i < arr.length; i++) {
+        let name = arr[i].name.toLowerCase();
+        let snippet = arr[i].snippet.toLowerCase();
+        if (name.includes(search.toLowerCase()) || snippet.includes(search.toLowerCase())) {
+            tempArr.push(arr[i]);
+        }
+    }
     phonesEl.innerHTML = '';
-    renderinPhones(tempArr);
+    renderinPhones(tempArr)
 }
+
+// function searchingList(search, arr) {
+//     let tempArr = arr.filter(function (item) {
+//         let name = item.name.toLowerCase();
+//         let snippet = item.snippet.toLowerCase();
+//         return name.includes(search.toLowerCase());
+//         // return snippet.includes(search.toLowerCase());
+//     });
+//     phonesEl.innerHTML = '';
+//     renderinPhones(tempArr);
+// }
