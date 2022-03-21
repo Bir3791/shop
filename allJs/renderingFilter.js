@@ -14,7 +14,8 @@ function renderingFilter() {
     mainContainer.insertBefore(filters, phonesEl);
     let inputEl = document.getElementById('input');
     inputEl.addEventListener('input', function (e) {
-        console.log(e.target.value);
+        let inputValue = e.target.value
+        searchingList(inputValue, phones)
     });
 
     let selectEl = document.getElementById('filter');
@@ -22,6 +23,7 @@ function renderingFilter() {
         selectEl = (e.target.value === 'Newest') ?  sortByAge(phones) : sortByAlpabet(phones);
     })
 }
+
 
 function sortByAge(arr) {
     const temp = JSON.parse(JSON.stringify(arr));
@@ -41,3 +43,7 @@ function sortByAlpabet(arr) {
    renderinPhones(rezutl);
 }
 
+function searchingList(search, arr) {
+    console.log(search)
+    console.log(arr)
+}
