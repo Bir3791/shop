@@ -43,7 +43,25 @@ function sortByAlpabet(arr) {
    renderinPhones(rezutl);
 }
 
+// function searchingList(search, arr) {
+//     let tempArr = [];
+//     for (let i = 0; i < arr.length; i++) {
+//         let name = arr[i].name.toLowerCase();
+//         let snippet = arr[i].snippet.toLowerCase();
+//         if (name.includes(search.toLowerCase())) {
+//             tempArr.push(arr[i]);
+//         }
+//     }
+//     phonesEl.innerHTML = '';
+//     renderinPhones(tempArr)
+// }
+
 function searchingList(search, arr) {
-    console.log(search)
-    console.log(arr)
+    let tempArr = arr.filter(function (item) {
+        let name = item.name.toLowerCase();
+        let snippet = item.snippet.toLowerCase();
+        return name.includes(search.toLowerCase());
+    });
+    phonesEl.innerHTML = '';
+    renderinPhones(tempArr);
 }
