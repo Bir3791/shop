@@ -1,5 +1,3 @@
-renderingFilter();
-
 function renderingFilter() {
     const filters = document.createElement("div");
     filters.classList.add('.filter');
@@ -11,7 +9,7 @@ function renderingFilter() {
             <option value="Alphabet">Alphabet</option>
         </select>
     `
-    mainContainer.insertBefore(filters, phonesEl);
+    filterContainer.appendChild(filters, phonesEl);
     let inputEl = document.getElementById('input');
     inputEl.addEventListener('input', function (e) {
         let inputValue = e.target.value

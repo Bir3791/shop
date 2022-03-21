@@ -1,2 +1,3 @@
 const phonesEl = document.querySelector('.phones'),
-    mainContainer = document.querySelector('.mainContainer') 
+    mainContainer = document.querySelector('.mainContainer'),
+    filterContainer = document.querySelector('.filter_input')

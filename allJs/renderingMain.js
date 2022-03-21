@@ -1,4 +1,16 @@
-renderinPhones(phones)
+renderingMainDisplay()
+
+function renderingMainDisplay() {
+    filterContainer.innerHTML = '';
+    phonesEl.innerHTML = '';
+    renderinPhones(phones);
+    renderingFilter();
+}
+
+function cleanDisplay() {
+    
+}
+
 
 function renderinPhones(data) {
     
@@ -6,7 +18,7 @@ function renderinPhones(data) {
         const phoneEl = document.createElement("div");
         phoneEl.classList.add('.phone');
         phoneEl.innerHTML = `
-        <a href=${data[i].id}>
+        <a href=#${data[i].id}>
             <div class="phone">
                     <div class="picture_container" >
                         <img src=${data[i].imageUrl}>
