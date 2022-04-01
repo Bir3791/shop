@@ -3,4 +3,4 @@ const phonesEl = document.querySelector('.phones'),
     filterContainer = document.querySelector('.filter_input'),
     onePhoneContainer = document.querySelector('.onePhoneContainer')
 
-let offset
+let offset = 0;

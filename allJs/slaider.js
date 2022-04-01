@@ -1,6 +1,5 @@
 function slider(index) {
         let sliderLine = document.querySelector('.slaider_line');
-        offset = 0
         offset = 400 * index;
         sliderLine.style.left = -offset + 'px'
     }
