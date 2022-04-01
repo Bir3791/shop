@@ -1,30 +1,17 @@
-const phonesEl = document.querySelector('.phones'),
-      mainContainer = document.querySelector('.mainContainer') 
-
-
-function renderingFilter() {
-    const filters = document.createElement("div");
-    filters.classList.add('.filter');
-    filters.innerHTML = `<span>Search</span> 
-        <input type="text">
-        <span>Sort by</span>
-        <select name="" id="">
-            <option value="age">Age</option>
-            <option value="alphabet">Alphabet</option>
-        </select>
-    `
-    mainContainer.insertBefore(filters, phonesEl);
+function renderingMainDisplay() {
+    filterContainer.innerHTML = "";
+    onePhoneContainer.innerHTML = "";
+    renderinPhones(phones);
+    renderingFilter();
 }
 
-renderingFilter()
 function renderinPhones(data) {
-    
     for (let i = 0; i < data.length; i++) {
         const phoneEl = document.createElement("div");
         phoneEl.classList.add('.phone');
         phoneEl.innerHTML = `
-        <div class="phone">
-            <a href="motorola-xoom-with-wi-fi">
+        <a href=#${data[i].id}>
+            <div class="phone">
                     <div class="picture_container" >
                         <img src=${data[i].imageUrl}>
                     </div>
@@ -32,11 +19,9 @@ function renderinPhones(data) {
                         <h2>${data[i].name}</h2>
                         <p>${data[i].snippet}</p>
                     </div>
-                </a>
-        </div>
+            </div>
+        </a>
         `;
         phonesEl.appendChild(phoneEl);
     }
 }
-
- renderinPhones(phones)

@@ -1,0 +1,41 @@
+.slaider_container{
+    min-width: 120px;
+    margin: 30px auto;
+}
+
+.slaider_pic{
+    width: 400px;
+    height: 400px;
+}
+
+.slaider{
+    width: 400px;
+    height: 400px;
+    border: 1px solid black;
+    border-radius: 5px;
+    margin: 1px auto;
+    overflow: hidden;    
+}
+
+.slaider_line {
+    height: 400px;
+    width: 1600px;
+    background-color: orangered;
+    display: flex;
+    position: relative;
+    transition: all ease 1s;
+}
+
+.slaider_container_btn{
+    width: fit-content;
+    margin: 1px auto;
+}
+
+.slaider_btn{
+    width: 100px;
+    margin: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+

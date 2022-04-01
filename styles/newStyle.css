@@ -5,12 +5,13 @@
 
 
 .mainContainer{
-    padding: 30px;
+    padding: 10px 50px;
 }
 
 .phones{
     display: flex;
     flex-wrap: wrap;
+    align-items: stretch;
 }
 
 .phone {
@@ -18,18 +19,27 @@
     border-radius: 10px;
     padding: 20px;
     margin: 10px;
-    height: 300px;
+    box-shadow: 7px 10px 10px rgb(201, 199, 199);
+    height: 200px;
     width: 1000px;
-    display: flex;
-    flex-flow: column;
+    /* display: flex;
+    flex-flow: column; */
+}
+
+.phone:hover{
+    opacity: 80%;
+    box-shadow: 7px 10px 10px rgb(70, 69, 69);
+
 }
 
 .phone img{
     width: 200px;
-    display: block;
+    float: left;
+    margin-top: -10px;
+    margin-right: 50px;
 }
 
-.phone a{
+a{
     text-decoration: none;
 }
 
