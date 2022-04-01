@@ -1,5 +1,3 @@
-
-
 function findAndShowPhoneDetails(search, arr) {
     let tempArr = [];
     for (let i = 0; i < arr.length; i++) {
@@ -8,7 +6,7 @@ function findAndShowPhoneDetails(search, arr) {
             tempArr.push(arr[i]);
             phonesEl.innerHTML = '';
             filterContainer.innerHTML = '';
-            renderinDeteilsPhone(tempArr)
+            renderinDeteilsPhone(tempArr);
         }
     }
 }
@@ -18,22 +16,10 @@ function renderinDeteilsPhone(arr) {
         onePhone.classList.add('.one_phone');
         onePhone.innerHTML = `<div class="slaider_container">
             <div class="slaider">
-                <div class="slaider_line">
-                    <img src="img/phones/dell-streak-7.0.jpg" class="slaider_pic" alt="">
-                    <img src="img/phones/dell-streak-7.1.jpg" class="slaider_pic" alt="">
-                    <img src="img/phones/dell-streak-7.2.jpg" class="slaider_pic" alt="">
-                    <img src="img/phones/dell-streak-7.3.jpg" class="slaider_pic" alt="">
-                    <img src="img/phones/dell-streak-7.4.jpg" class="slaider_pic" alt="">
-                </div>
+                <div class="slaider_line"></div>
             </div>
         </div>
-        <div class="slaider_container_btn">
-            <img src="img/phones/dell-streak-7.0.jpg" class="slaider_btn btn1" alt="">
-            <img src="img/phones/dell-streak-7.1.jpg" class="slaider_btn btn2" alt="">
-            <img src="img/phones/dell-streak-7.2.jpg" class="slaider_btn btn3" alt="">
-            <img src="img/phones/dell-streak-7.3.jpg" class="slaider_btn btn4" alt="">
-            <img src="img/phones/dell-streak-7.4.jpg" class="slaider_btn btn5" alt="">
-        </div>
+        <div class="slaider_container_btn"></div>
         <div class="main-discription">
             <div class="big_name">
                 <h1>${arr[0].name}</h1>
@@ -44,6 +30,8 @@ function renderinDeteilsPhone(arr) {
             </div>
         </div>
         `
-          
-        onePhoneContainer.appendChild(onePhone);
+    onePhoneContainer.appendChild(onePhone);
+    imagesForSlayderBtn(arr);
+    imagesForSlayder(arr)
 }
+

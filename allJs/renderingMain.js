@@ -5,10 +5,7 @@ function renderingMainDisplay() {
     renderingFilter();
 }
 
-
-
 function renderinPhones(data) {
-    
     for (let i = 0; i < data.length; i++) {
         const phoneEl = document.createElement("div");
         phoneEl.classList.add('.phone');
