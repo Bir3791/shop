@@ -1,15 +1,10 @@
 renderingMainDisplay()
 
 function renderingMainDisplay() {
-    filterContainer.innerHTML = '';
-    phonesEl.innerHTML = '';
     renderinPhones(phones);
     renderingFilter();
 }
 
-function cleanDisplay() {
-    
-}
 
 
 function renderinPhones(data) {
