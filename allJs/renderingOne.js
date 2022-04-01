@@ -1,8 +1,6 @@
-window.addEventListener('hashchange', function () {
-    location.hash.length !== 0 ? searchingPhone(location.hash.slice(1), phones) : renderingMainDisplay();
-})
 
-function searchingPhone(search, arr) {
+
+function findAndShowPhoneDetails(search, arr) {
     let tempArr = [];
     for (let i = 0; i < arr.length; i++) {
         let name = arr[i].id;
@@ -47,5 +45,5 @@ function renderinDeteilsPhone(arr) {
         </div>
         `
           
-        mainContainer.appendChild(onePhone);
+        onePhoneContainer.appendChild(onePhone);
 }

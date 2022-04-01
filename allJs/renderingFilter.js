@@ -1,3 +1,5 @@
+let currentArr = phones;
+
 function renderingFilter() {
     const filters = document.createElement("div");
     filters.classList.add('.filter');
@@ -18,14 +20,15 @@ function renderingFilter() {
 
     let selectEl = document.getElementById('filter');
     selectEl.addEventListener('change', function (e) {
-        selectEl = (e.target.value === 'Newest') ?  sortByAge(phones) : sortByAlpabet(phones);
+        selectEl = (e.target.value === 'Newest')
+            ? sortByAge(currentArr)
+            : sortByAlpabet(currentArr);
     })
 }
 
 
 function sortByAge(arr) {
-    const temp = JSON.parse(JSON.stringify(arr));
-    let rezutl = temp.sort(function (a, b) {
+    let rezutl = arr.sort(function (a, b) {
         if (a['age'] < b['age']) return -1;
     })
     phonesEl.innerHTML = '';
@@ -33,8 +36,7 @@ function sortByAge(arr) {
 }
 
 function sortByAlpabet(arr) {
-    const temp = JSON.parse(JSON.stringify(arr));
-    let rezutl = temp.sort(function (a, b) {
+        let rezutl = arr.sort(function (a, b) {
         if (a['name'] < b['name']) return -1;
     })
     phonesEl.innerHTML = '';
@@ -51,6 +53,7 @@ function searchingList(search, arr) {
         }
     }
     phonesEl.innerHTML = '';
+    currentArr = tempArr
     renderinPhones(tempArr)
 }
 

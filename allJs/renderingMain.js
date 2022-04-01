@@ -1,6 +1,6 @@
-renderingMainDisplay()
-
 function renderingMainDisplay() {
+    filterContainer.innerHTML = "";
+    onePhoneContainer.innerHTML = "";
     renderinPhones(phones);
     renderingFilter();
 }
